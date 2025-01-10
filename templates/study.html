@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study management</title>
+
+    <table class="table" border="2px solid">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Study name</th>
+            <th scope="col">Study Phase</th>
+            <th scope="col">Sponsor Name</th>
+            <th scope="col">Study description</th>
+        </tr>
+        </thead>
+<!--        <tbody>-->
+<!--        {% for i in res %}-->
+<!--        <tr>-->
+<!--            <th scope="row">1</th>-->
+<!--            <td>{{i.study_name}}</td>-->
+<!--            <td>{{i.study_phase}}</td>-->
+<!--            <td>{{i.sponser_name}}</td>-->
+<!--            <td>{{i.study_description }}</td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--        </tbody>-->
+        <tbody>
+           {% csrf_token %}
+             {{all_study}}
+           {{% for item all_study}}
+            <tr>
+                <td>1</td>
+                <td>{{ item.study_name }}</td>
+                <td>{{ item.study_phase }}</td>
+                <td>{{ item.sponser_name }}</td>
+                <td>{{ item.study_description }}</td>
+                <td><a href="test1">Edit</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary btn-lg">Add study</button>
+</head>
+</html>

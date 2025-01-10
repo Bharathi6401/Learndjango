@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete student</title>
+</head>
+<body>
+<h>Delete student</h>
+<p>Are you sure you want to delete? {{Student.first_name}} {{Student.last_name}}</p>
+<form action="" method="POST">
+  {% csrf_token %}
+  <button type="submit">Confirm</button>
+</form>
+<a href="/">Cancel</a>
+</body>
+</html>

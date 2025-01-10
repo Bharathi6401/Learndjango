@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add study</title>
+
+</head>
+<body>
+<h>Add study</h>
+<form action=" " method="POST">
+    {% csrf_token %}
+    {{study_form}}
+    <input type="submit" value="save">
+
+
+</form>
+</body>
+</html>

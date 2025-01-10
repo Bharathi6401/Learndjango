@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student detail</title>
+</head>
+<body>
+<h>{{Student.first_name}} {Student.last_name}}</h>
+<p>Date of birth:{{Student.dob}}</p>
+<p>Enrollment date:{{Student.enrollment_date}}</p>
+<a href="{%url student.update student.id %}"> Edit</a>
+<a href="{%url student.delete student.id %}">Delete</a>
+
+</body>
+</html>

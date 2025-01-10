@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study management</title>
+    <h1><strong>Study management</strong></h1>
+    <table class="table" border="2px solid">
+        <thead>
+        <tr>
+
+            <th scope="col">Study name</th>
+            <th scope="col">Study Phase</th>
+            <th scope="col">Sponsor Name</th>
+            <th scope="col">Study description</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Upload</th>
+            <th scope="col">View</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in all_study %}
+        <tr>
+            <td>{{ item.study_name }}</td>
+            <td>{{ item.study_phase }}</td>
+            <td>{{ item.sponser_name }}</td>
+            <td>{{ item.study_description }}</td>
+            <td>
+                <a href="{% url 'student_update' item.id %}">
+                    <button>Update</button>
+                </a>
+            </td>
+            <td>
+                <a href="{% url 'student_delete' item.id %}">
+                    <button>Delete</button>
+                </a>
+            </td>
+            <td>
+                <button>Upload</button>
+            </td>
+            <td>
+                 <button>View </button>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+
+    </table>
+    <a href="studtest">
+        <button type="button" class="btn btn-primary btn-lg">Add study</button>
+    </a>
+
+
+</head>
+</html>
+
+
+
